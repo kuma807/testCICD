@@ -1,0 +1,10 @@
+# やったこと
+
+## workflow 追加
+
+Actions から ESLint を追加
+
+## エラーが出るため
+
+settign > actions > general > Workflow permissions を
+Read and write permissions に変更
