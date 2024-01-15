@@ -14,4 +14,9 @@ Read and write permissions に変更
 
 3.eslint-results.sarif を追加
 
-4.workflows/eslint.yml の変更
+4.workflows/eslint.yml の変更、github 上にエラーを保存しないようにした
+
+5.eslint-results.sarif を削除
+
+6.ESLint couldn't find the plugin "eslint-plugin-react".というエラーが出たため以下のコマンドを実行して plugin をダウンロード
+npm install eslint-plugin-react@latest --save-dev
