@@ -20,3 +20,5 @@ Read and write permissions に変更
 
 6.ESLint couldn't find the plugin "eslint-plugin-react".というエラーが出たため以下のコマンドを実行して plugin をダウンロード
 npm install eslint-plugin-react@latest --save-dev
+
+### ESlint 動いた！！！
