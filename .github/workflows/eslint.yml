@@ -38,3 +38,11 @@ jobs:
         run: npx eslint .
           --config .eslintrc.js
           --ext .js,.jsx,.ts,.tsx
+      
+      - name: Install Prettier
+        run: |
+          npm install prettier@3.2.4
+      
+      - name: Run Prettier
+        run: |
+          prettier --write '**/*.{ts,tsx}'
