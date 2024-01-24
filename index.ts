@@ -33,4 +33,4 @@ const user1 = new User(1, "John Daaaaaaaaaaaaaaaaaaaaaaaaaoe", "johndoe@example.
 user1.displayUserInfo();
 
 user1.updateName("John Smith");
-user1.displayUserInfo();
+user1.displayUserInfo()
