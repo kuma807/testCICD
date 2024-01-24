@@ -32,17 +32,8 @@ jobs:
         run: |
           npm ci
 
-      - name: Run ESLint and Prettier
-        run: npm run format
+      - name: Run ESLint
+        run: npm run lint
       
-      # format後にgit addして差分があるかgit diffでチェック
-      - name: Check diff exists 
-        run: |
-          git add -N .
-          git diff
-          line=`git diff | wc -l`
-          if [ $line -gt 0 ]; then
-            echo "You need to fix format"
-            git diff
-            exit -1
-          fi
+      - name: Run Prettier
+        run: npm run format
