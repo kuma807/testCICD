@@ -1,4 +1,6 @@
 module.exports = {
+  parser: '@typescript-eslint/parser', // TypeScriptのパーサーを指定
+  plugins: ['@typescript-eslint'],
   env: {
     browser: true, // ブラウザ環境での実行を想定
     es2021: true, // ES2021 に準拠
@@ -7,6 +9,7 @@ module.exports = {
   extends: [
     "eslint:recommended", // ESLint の推奨ルールを使用
     "plugin:react/recommended", // React 用の推奨ルールを使用（React プロジェクトの場合）
+    'plugin:@typescript-eslint/recommended' 
   ],
   parserOptions: {
     ecmaFeatures: {
