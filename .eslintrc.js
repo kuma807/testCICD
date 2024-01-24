@@ -19,5 +19,6 @@ module.exports = {
     "no-unused-vars": "warn", // 未使用変数は警告
     "no-console": "off", // console の使用を許可
     eqeqeq: ["error", "always"], // 厳密等価演算子の使用を強制
+    semi: ["error", "always"],
   },
 };
