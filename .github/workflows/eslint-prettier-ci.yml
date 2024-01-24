@@ -7,7 +7,7 @@
 # More details at https://github.com/eslint/eslint
 # and https://eslint.org
 
-name: ESLint
+name: ESLint and Prettier CI
 
 on:
   push:
@@ -18,7 +18,7 @@ on:
 
 jobs:
   eslint:
-    name: Run eslint scanning
+    name: Run eslint, prettier scanning
     runs-on: ubuntu-latest
     permissions:
       contents: read
