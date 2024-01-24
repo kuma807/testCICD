@@ -28,19 +28,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install ESLint
+      - name: Install npm
         run: |
-          npm install eslint@8.10.0
+          npm ci
 
-      - name: Run ESLint
-        run: npx eslint .
-          --config .eslintrc.js
-          --ext .js,.jsx,.ts,.tsx
+      - name: Run ESLint and Prettier
+        run: npm run format
       
-      - name: Install Prettier
+      # format後にgit addして差分があるかgit diffでチェック
+      - name: Check diff exists 
         run: |
-          npm install prettier@3.2.4
-      
-      - name: Run Prettier
-        run: |
-          npx prettier --write '**/*.{ts,tsx}'
+          git add -N .
+          git diff
+          line=`git diff | wc -l`
+          if [ $line -gt 0 ]; then
+            echo "You need to fix format"
+            git diff
+            exit -1
+          fi
