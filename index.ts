@@ -29,7 +29,7 @@ class User implements IUser {
 }
 
 // 使用例
-const user1 = new User(1, "John Doe", "johndoe@example.com");
+const user1 = new User(1, "John Daaaaaaaaaaaaaaaaaaaaaaaaaoe", "johndoe@example.com");
 user1.displayUserInfo();
 
 user1.updateName("John Smith");

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "eslint . --config .eslintrc.js --ext .js,.jsx,.ts,.tsx --fix && prettier --write '**/*.{ts,tsx}'"
+    "format": "prettier --check '**/*.{ts,tsx}'",
+    "lint": "eslint . --config .eslintrc.js --ext .js,.jsx,.ts,.tsx --max-warnings=0"
   },
   "keywords": [],
   "author": "",
